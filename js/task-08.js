@@ -8,10 +8,10 @@ const handleSubmit = (event) => {
 
   if (email.value === "" || password.value === "") {
     alert("Wszystkie pola powinny zostać wypełnione!");
+  } else {
+    console.log({ email: `${email.value}`, password: `${password.value}` });
+    event.currentTarget.reset();
   }
-
-  console.log({ email: `${email.value}`, password: `${password.value}` });
-  event.currentTarget.reset();
 };
 
 loginForm.addEventListener("submit", handleSubmit);
